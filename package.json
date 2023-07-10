@@ -1,14 +1,39 @@
 {
   "name": "csvtojsonconverter",
   "version": "1.0.0",
-  "description": "",
+  "description": "[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "npx jest",
+    "format": "prettier --write ."
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "csv-parser": "^3.0.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "jest": "^29.6.1",
+    "prettier": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philipvella/csvToJsonConverter.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/philipvella/csvToJsonConverter/issues"
+  },
+  "homepage": "https://github.com/philipvella/csvToJsonConverter#readme",
+  "engines": {
+    "node": "16.x"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx prettier --write ."
+    }
   }
+
 }
